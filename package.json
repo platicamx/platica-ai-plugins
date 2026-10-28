@@ -1,0 +1,7 @@
+{
+  "name": "platica-ai-plugins",
+  "private": true,
+  "scripts": {
+    "zip:chatgpt": "node scripts/zip-chatgpt.mjs"
+  }
+}
