@@ -1,0 +1,7 @@
+{
+  "mcpServers": {
+    "platica": {
+      "url": "https://api.platica.mx/mcp"
+    }
+  }
+}

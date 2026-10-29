@@ -2,6 +2,9 @@
   "name": "platica-ai-plugins",
   "private": true,
   "scripts": {
-    "zip:chatgpt": "node scripts/zip-chatgpt.mjs"
+    "zip:chatgpt": "node scripts/zip-chatgpt.mjs",
+    "validate:cursor": "node scripts/validate-cursor.mjs",
+    "test:cursor": "node --test scripts/validate-cursor.test.mjs",
+    "install:cursor": "node scripts/install-cursor.mjs"
   }
 }

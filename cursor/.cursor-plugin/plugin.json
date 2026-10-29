@@ -1,0 +1,13 @@
+{
+  "name": "platic",
+  "version": "1.0.0",
+  "description": "Connect your Platica account to browse WhatsApp conversations, find clients, and send messages you explicitly request.",
+  "author": { "name": "Platica" },
+  "homepage": "https://platica.mx",
+  "repository": "https://github.com/platicamx/platica-ai-plugins",
+  "license": "MIT",
+  "keywords": ["platica", "whatsapp", "conversations", "clients", "productivity"],
+  "logo": "assets/platic.png",
+  "skills": "skills/",
+  "mcpServers": "mcp.json"
+}

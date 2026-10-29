@@ -1,0 +1,10 @@
+{
+  "name": "platic",
+  "owner": { "name": "Platica" },
+  "metadata": {
+    "description": "Official Platica plugins for Cursor."
+  },
+  "plugins": [
+    { "name": "platic", "source": "cursor" }
+  ]
+}
