@@ -1,10 +1,21 @@
 # platica-ai-plugins
 
-Official source for **platic**, the Platica plugin for ChatGPT and Codex.
+Official source for **platic**, the Platica plugin for ChatGPT, Codex, and Cursor.
 
 Connect your Platica account to browse workspaces, conversations, clients, and WhatsApp templates, and send messages you explicitly request. Access follows your authorized workspaces and current account permissions. The package connects to the hosted Platica MCP server using OAuth; no API keys are included.
 
-This first release contains the ChatGPT package. Other platforms will be added in separate releases after their packages are verified.
+The repository contains the ChatGPT package and a Cursor package prepared for local testing and submission. Claude and other platforms remain local drafts and are not listed in the Cursor catalog.
+
+## Cursor
+
+The full plugin lives in [`cursor/`](cursor/README.md), including the MCP, `use-platica` skill, logo, and license. The root `.cursor-plugin/marketplace.json` lists only this package. Cursor takes a public Git repository rather than the ChatGPT upload ZIP.
+
+```sh
+npm run validate:cursor
+npm run install:cursor
+```
+
+See the [Cursor submission guide](docs/cursor-submission.md) for local testing, organization import, and publisher application fields. Live OAuth and tool checks inside Cursor are required before submission; static validation is not evidence of a completed integration.
 
 ## Build the upload package
 
