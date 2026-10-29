@@ -1,7 +1,7 @@
 {
   "$schema": "https://agent-plugins.org/schemas/1.0.0/plugin.schema.json",
   "name": "platic",
-  "version": "1.0.1",
+  "version": "1.0.2",
   "description": "Connect a Platica workspace so ChatGPT can read conversations and clients and send a WhatsApp message only when asked.",
   "author": {
     "name": "Platica",
@@ -92,7 +92,7 @@
         "commerce_description": "This plugin does not sell products or process payments."
       },
       "publication": {
-        "release_notes": "Updated the platic listing and composer icon to the Platica speech bubble with a central star. MCP configuration and operational instructions are unchanged."
+        "release_notes": "Updated the platic listing and composer icon to the current Platica speech bubble with a central star on a light gradient background. MCP configuration and operational instructions are unchanged."
       }
     }
   }
