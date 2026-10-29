@@ -8,7 +8,7 @@
 - Plugin name: `platic`
 - MCP: `https://api.platica.mx/mcp`, using OAuth
 - Skill: `use-platica`, matching the ChatGPT package's operational instructions
-- Logo: `cursor/assets/platic.png`, the Platica speech bubble with a central star on a dark background, 512 × 512
+- Logo: `cursor/assets/platic.png`, the current Platica speech bubble with a central star on a light gradient background, 512 × 512
 
 Claude and Grok drafts are excluded from this catalog. Updating the package does not publish it or deploy the API.
 
@@ -69,6 +69,8 @@ Suggested fields:
 The logo URL will work only after the files are pushed and merged to public `main`. Open it privately to confirm it loads, and inspect the public repo before submitting. The source contains no reviewer credentials. Read the publisher terms and submit the application yourself when package verification is complete. Review feedback may require further changes; preparing files is not marketplace approval.
 
 ## Updates
+
+The current icon update prepares Cursor 1.0.1 and ChatGPT 1.0.2. It replaces only the brand image and preserves the MCP and skill behavior tested above. The publisher application has already been submitted; the form checked on 2026-10-29 still offers a new application rather than an edit control. Update the existing submission when Cursor provides an editing flow or review instructions; do not assume a repository change refreshes a previously captured logo.
 
 Increment `cursor/.cursor-plugin/plugin.json`'s version for releases and keep the skill synchronized with its ChatGPT counterpart. Run the validator after changes. Refresh your imported team marketplace; public releases follow Cursor's review process.
 
