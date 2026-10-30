@@ -2,7 +2,9 @@
 
 Official source for **platic**, the Platica plugin for ChatGPT, Codex, and Cursor.
 
-Connect your Platica account to browse workspaces, WhatsApp conversations, clients, and templates. Send messages when you explicitly request them, using your existing workspace permissions. Each user signs in through OAuth.
+Connect your Platica account to work with conversations, clients, templates, campaigns, AI agents, social comments, webhooks and usage. Messages, changes and deletions happen only when you explicitly request them, using your existing workspace permissions. Each user signs in through OAuth.
+
+Both packages connect to `https://api.platica.mx/mcp/apps`, the endpoint for app directories. It leaves out the tools that ask for credentials or connect third-party services (custom HTTP API tools and external MCP servers); those are configured in the Platica dashboard. The full catalog at `https://api.platica.mx/mcp` stays available to anyone who adds it by hand as a custom connector.
 
 ## Cursor
 
