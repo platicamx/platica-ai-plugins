@@ -1,10 +1,10 @@
 # platica-ai-plugins
 
-Official source for **platic**, the Platica plugin for ChatGPT, Codex, and Cursor.
+Official source for **platic**, the Platica plugin for ChatGPT, Codex, Cursor, Claude, and Grok Build.
 
 Connect your Platica account to work with conversations, clients, templates, campaigns, AI agents, social comments, webhooks and usage. Messages, changes and deletions happen only when you explicitly request them, using your existing workspace permissions. Each user signs in through OAuth.
 
-Both packages connect to `https://api.platica.mx/mcp/apps`, the endpoint for app directories. It leaves out the tools that ask for credentials or connect third-party services (custom HTTP API tools and external MCP servers); those are configured in the Platica dashboard. The full catalog at `https://api.platica.mx/mcp` stays available to anyone who adds it by hand as a custom connector.
+Every package connects to `https://api.platica.mx/mcp/apps`, the endpoint for app directories. It leaves out the tools that ask for credentials or connect third-party services (custom HTTP API tools and external MCP servers); those are configured in the Platica dashboard. The full catalog at `https://api.platica.mx/mcp` stays available to anyone who adds it by hand as a custom connector.
 
 ## Cursor
 
@@ -29,15 +29,28 @@ npm run zip:chatgpt
 
 The output is `dist/platic-chatgpt.zip`, containing the manifest, MCP configuration, `use-platica` skill, icon, and license.
 
+## Claude
+
+The plugin bundle lives in `claude/` (`.claude-plugin/plugin.json`, `.mcp.json`, skill, README, license). Claude also lists the server itself as an MCP connector. See the [Claude submission guide](docs/submissions/claude.md).
+
+## Grok Build
+
+The plugin lives in `grok/` (`.grok-plugin/plugin.json`, `.mcp.json`, skill, README, license, logo). It is submitted by pull request to the xAI plugin marketplace. See the [Grok submission guide](docs/submissions/grok.md).
+
+## Muse
+
+Muse takes the MCP server directly through its connector platform, with no package. The [Muse submission guide](docs/submissions/muse.md) has the form answers and the Read / Write / Sensitive write classification of every tool.
+
 ## Development
 
-Cursor's package lives in `cursor/`, and its catalog is `.cursor-plugin/marketplace.json`. Keep the shared skill and icon consistent across both packages.
+Each platform has its own package folder: `chatgpt/`, `cursor/` (catalog in `.cursor-plugin/marketplace.json`), `claude/` and `grok/`. Keep the shared skill, icon, license and version consistent across them.
 
-Validate the Cursor package and run its tests before opening a pull request:
+Validate the packages and run the tests before opening a pull request:
 
 ```sh
 npm run validate:cursor
 npm run test:cursor
+npm run validate:directories
 ```
 
 These checks validate the package structure. To check account access and tools, connect the plugin in the target application and try it with a test account.
