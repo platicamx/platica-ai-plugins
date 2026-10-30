@@ -31,15 +31,15 @@ The output is `dist/platic-chatgpt.zip`, containing the manifest, MCP configurat
 
 ## Claude
 
-The plugin bundle lives in `claude/` (`.claude-plugin/plugin.json`, `.mcp.json`, skill, README, license). Claude also lists the server itself as an MCP connector. See the [Claude submission guide](docs/submissions/claude.md).
+The plugin bundle lives in `claude/` (`.claude-plugin/plugin.json`, `.mcp.json`, skill, README, license). Claude also lists the server itself as an MCP connector.
 
 ## Grok Build
 
-The plugin lives in `grok/` (`.grok-plugin/plugin.json`, `.mcp.json`, skill, README, license, logo). It is submitted by pull request to the xAI plugin marketplace. See the [Grok submission guide](docs/submissions/grok.md).
+The plugin lives in `grok/` (`.grok-plugin/plugin.json`, `.mcp.json`, skill, README, license, logo). It is listed through the xAI plugin marketplace.
 
 ## Muse
 
-Muse takes the MCP server directly through its connector platform, with no package. The [Muse submission guide](docs/submissions/muse.md) has the form answers and the Read / Write / Sensitive write classification of every tool.
+Muse connects to the MCP server directly, with no package in this repository.
 
 ## Development
 
