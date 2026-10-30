@@ -1,0 +1,14 @@
+{
+  "name": "platic",
+  "version": "1.1.0",
+  "description": "Platica for Grok Build via the hosted Platica MCP server at api.platica.mx. Work with WhatsApp and social conversations, clients, templates, campaigns, AI agents, comments, webhooks and usage. Sign in with your Platica account on first connect; sends, changes and deletions happen only when you explicitly ask.",
+  "author": {
+    "name": "Platica",
+    "url": "https://platica.mx"
+  },
+  "homepage": "https://platica.mx",
+  "repository": "https://github.com/platicamx/platica-ai-plugins",
+  "license": "MIT",
+  "keywords": ["platica", "platic", "platica whatsapp", "platica crm", "platica agents"],
+  "logo": "assets/platic.png"
+}
