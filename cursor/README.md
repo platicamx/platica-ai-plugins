@@ -37,5 +37,3 @@ Tools exchange the data needed for the requested operation with `api.platica.mx`
 - [Package issues](https://github.com/platicamx/platica-ai-plugins/issues)
 
 Source is licensed under [MIT](LICENSE). Platica retains rights to its name and brand assets.
-
-See [submission and verification steps](../docs/cursor-submission.md). Validation checks package structure; it does not prove that OAuth or tools work inside Cursor.

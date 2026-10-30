@@ -2,47 +2,49 @@
 
 Official source for **platic**, the Platica plugin for ChatGPT, Codex, and Cursor.
 
-Connect your Platica account to browse workspaces, conversations, clients, and WhatsApp templates, and send messages you explicitly request. Access follows your authorized workspaces and current account permissions. The package connects to the hosted Platica MCP server using OAuth; no API keys are included.
-
-The repository contains the ChatGPT package and a Cursor package prepared for local testing and submission. Claude and other platforms remain local drafts and are not listed in the Cursor catalog.
+Connect your Platica account to browse workspaces, WhatsApp conversations, clients, and templates. Send messages when you explicitly request them, using your existing workspace permissions. Each user signs in through OAuth.
 
 ## Cursor
 
-The full plugin lives in [`cursor/`](cursor/README.md), including the MCP, `use-platica` skill, logo, and license. The root `.cursor-plugin/marketplace.json` lists only this package. Cursor takes a public Git repository rather than the ChatGPT upload ZIP.
+See the [Cursor setup guide](cursor/README.md) for installation and examples.
+
+To try the plugin locally, run these commands from the repository root with Node.js installed:
 
 ```sh
 npm run validate:cursor
 npm run install:cursor
 ```
 
-See the [Cursor submission guide](docs/cursor-submission.md) for local testing, organization import, and publisher application fields. Live OAuth and tool checks inside Cursor are required before submission; static validation is not evidence of a completed integration.
+Reload Cursor, enable the plugin, and connect your Platica account through OAuth.
 
-## Build the upload package
+## ChatGPT and Codex
 
-With Node.js installed, run from the repository root:
+The plugin package lives in `chatgpt/`. To build the upload ZIP, run:
 
 ```sh
 npm run zip:chatgpt
 ```
 
-Upload `dist/platic-chatgpt.zip` at [OpenAI Plugins](https://platform.openai.com/plugins). The ZIP contains the manifest, MCP configuration, onboarding skill, brand icon, and license. Generated ZIPs and local platform drafts are excluded from Git.
+The output is `dist/platic-chatgpt.zip`, containing the manifest, MCP configuration, `use-platica` skill, icon, and license.
 
-## Submit for review
+## Development
 
-The package includes five positive and three negative review scenarios. These are scenarios to execute, not evidence that they have passed. Before submitting:
+Cursor's package lives in `cursor/`, and its catalog is `.cursor-plugin/marketplace.json`. Keep the shared skill and icon consistent across both packages.
 
-1. Complete publisher identity verification and the MCP domain challenge shown in the portal.
-2. Connect the MCP using OAuth and resolve the portal's metadata, skill, and tool findings.
-3. Provide a dedicated reviewer account and sign-in instructions through the portal's private review form. Prepare a demo workspace with a connected WhatsApp channel, approved test template, example parameters, and a controlled demo recipient. Keep credentials and recipient details outside this repository and the ZIP.
-4. Run all eight scenarios with that account, record the walkthrough, and provide the video URL in the portal.
-5. Submit for review. Publish after approval.
+Validate the Cursor package and run its tests before opening a pull request:
 
-Packaging does not verify the live OAuth flow, tool annotations, or WhatsApp delivery. See the [official submission guide](https://developers.openai.com/plugins/deploy/submission).
+```sh
+npm run validate:cursor
+npm run test:cursor
+```
+
+These checks validate the package structure. To check account access and tools, connect the plugin in the target application and try it with a test account.
 
 ## Support and license
 
 - [MCP documentation](https://docs.platica.mx/mcp/bienvenida)
 - [Privacy policy](https://platica.mx/privacidad)
 - [Terms](https://platica.mx/terminos-y-condiciones)
+- [Issues](https://github.com/platicamx/platica-ai-plugins/issues)
 
-The package source is licensed under [MIT](LICENSE). The Platica name and brand assets remain the property of Platica; the code license does not grant trademark rights.
+The source is licensed under [MIT](LICENSE). Platica retains rights to its name and brand assets.
