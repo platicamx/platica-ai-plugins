@@ -1,0 +1,13 @@
+{
+  "name": "platic",
+  "version": "1.1.0",
+  "description": "Work in your Platica account from Claude: WhatsApp and social conversations, clients, templates, campaigns, AI agents, comments, webhooks and usage. Sends, changes and deletions happen only when you explicitly ask.",
+  "author": {
+    "name": "Platica",
+    "url": "https://platica.mx"
+  },
+  "homepage": "https://platica.mx",
+  "repository": "https://github.com/platicamx/platica-ai-plugins",
+  "license": "MIT",
+  "keywords": ["platica", "whatsapp", "conversations", "clients", "campaigns", "ai agents"]
+}

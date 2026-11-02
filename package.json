@@ -5,6 +5,7 @@
     "zip:chatgpt": "node scripts/zip-chatgpt.mjs",
     "validate:cursor": "node scripts/validate-cursor.mjs",
     "test:cursor": "node --test scripts/validate-cursor.test.mjs",
-    "install:cursor": "node scripts/install-cursor.mjs"
+    "install:cursor": "node scripts/install-cursor.mjs",
+    "validate:directories": "node scripts/validate-directories.mjs"
   }
 }

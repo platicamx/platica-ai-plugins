@@ -46,7 +46,7 @@ export function validateCursor(repositoryRoot = root) {
   assert.equal(manifest.mcpServers, "mcp.json");
   packagePath(manifest.skills);
   const mcp = json(packagePath(manifest.mcpServers));
-  assert.deepEqual(mcp, { mcpServers: { platica: { url: "https://api.platica.mx/mcp" } } }, "Only the hosted MCP URL belongs in this config; no headers, tokens, commands, or environment");
+  assert.deepEqual(mcp, { mcpServers: { platica: { url: "https://api.platica.mx/mcp/apps" } } }, "Only the hosted MCP URL belongs in this config; no headers, tokens, commands, or environment");
   const catalog = json(join(root, ".cursor-plugin/marketplace.json"));
   assert(catalog.name && catalog.owner?.name);
   assert.deepEqual(catalog.plugins, [{ name: "platic", source: "cursor" }], "Catalog must expose only the Cursor package");

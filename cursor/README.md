@@ -1,8 +1,18 @@
 # platic for Cursor
 
-Connect your Platica account to browse authorized workspaces, WhatsApp conversations, clients, and templates. Send messages only when you explicitly request them. Access follows your existing workspace role.
+Connect your Platica account to work in your authorized workspaces from Cursor:
 
-This Cursor plugin includes the `use-platica` skill and the hosted Platica MCP server. OAuth connects each user's own account; the package contains no API keys or tokens. A Platica account is required, and sending requires an eligible WhatsApp channel and sufficient permissions.
+- read and search WhatsApp, Messenger, Instagram and comment conversations;
+- manage clients, tags and custom fields;
+- review WhatsApp templates and scheduled messages, and send messages you request;
+- prepare and send campaigns;
+- configure AI agents: prompts, schedules, guardrails, sub-agents and knowledge;
+- reply to and moderate social comments;
+- manage webhooks and check usage.
+
+Anything that sends a message, publishes, changes data or deletes records happens only when you explicitly ask for it. Access follows your existing workspace role.
+
+This Cursor plugin includes the `use-platica` skill and the hosted Platica MCP server at `https://api.platica.mx/mcp/apps`. OAuth connects each user's own account; the package contains no API keys or tokens, and no tool asks for one. Credentials for external services, such as custom API tools or third-party MCP servers, are configured in the Platica dashboard; those tools are not part of this plugin. A Platica account is required, and sending requires an eligible WhatsApp channel and sufficient permissions.
 
 ## Try it locally
 
@@ -25,7 +35,10 @@ Other examples:
 - Find a client named Ana in my Platica workspace.
 - Which WhatsApp templates are approved in my Platica workspace?
 
-Sending requires an explicit request identifying the channel, controlled recipient, template or message, and any parameters. Listing or drafting does not authorize a send. A queued response does not confirm delivery. Never automatically retry an uncertain send.
+- Create a draft campaign with the approved test template, without sending it.
+- Show the knowledge entries of my support agent.
+
+Sending requires an explicit request identifying the channel, controlled recipient, template or message, and any parameters. Listing or drafting does not authorize a send. A queued response does not confirm delivery. Never automatically retry an uncertain send. Before sending a campaign, replying to a public comment, changing an agent, changing a webhook or deleting a record, the agent states what will happen and waits for your confirmation.
 
 ## Data and support
 

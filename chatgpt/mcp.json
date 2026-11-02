@@ -3,7 +3,7 @@
   "mcpServers": {
     "platica": {
       "type": "streamable-http",
-      "url": "https://api.platica.mx/mcp",
+      "url": "https://api.platica.mx/mcp/apps",
       "extensions": {
         "com.openai": {
           "auth": {

@@ -1,12 +1,12 @@
 {
   "name": "platic",
-  "version": "1.0.1",
-  "description": "Connect your Platica account to browse WhatsApp conversations, find clients, and send messages you explicitly request.",
+  "version": "1.1.0",
+  "description": "Connect your Platica account to work with WhatsApp and social conversations, clients, campaigns and AI agents. Sends, changes and deletions happen only when you explicitly request them.",
   "author": { "name": "Platica" },
   "homepage": "https://platica.mx",
   "repository": "https://github.com/platicamx/platica-ai-plugins",
   "license": "MIT",
-  "keywords": ["platica", "whatsapp", "conversations", "clients", "productivity"],
+  "keywords": ["platica", "whatsapp", "conversations", "clients", "campaigns", "ai agents", "productivity"],
   "logo": "assets/platic.png",
   "skills": "skills/",
   "mcpServers": "mcp.json"
