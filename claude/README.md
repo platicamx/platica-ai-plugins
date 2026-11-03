@@ -2,13 +2,15 @@
 
 Connect your Platica account to work in your authorized workspaces from Claude:
 
-- read and search WhatsApp, Messenger, Instagram and comment conversations;
+- read WhatsApp, Messenger, Instagram and comment conversations;
 - manage clients, tags and custom fields;
-- review WhatsApp templates and scheduled messages, and send messages you request;
+- review WhatsApp templates and scheduled messages, and send approved templates you request;
 - prepare and send campaigns;
-- configure AI agents: prompts, schedules, guardrails, sub-agents and knowledge;
-- reply to and moderate social comments;
-- manage webhooks and check usage.
+- configure AI agents: prompts, schedules, guardrails and knowledge;
+- publish and reply to social comments;
+- check usage.
+
+The directory profile does not expose generic messages, agent execution/delegation, custom tool discovery/connections, webhook administration, moderation, private replies, knowledge updates/reprocessing or search/export. Use the Platica dashboard for those operations.
 
 Anything that sends a message, publishes, changes data or deletes records happens only when you explicitly ask for it. Access follows your existing workspace role.
 
@@ -27,7 +29,7 @@ Each user signs in with OAuth on first connect. The plugin contains no API keys 
 - Which WhatsApp templates are approved in my Platica workspace?
 - Create a draft campaign with the approved test template, without sending it.
 
-Sending requires an explicit request identifying the channel, recipient, template or message, and any parameters. Listing or drafting does not authorize a send. A queued response does not confirm delivery.
+Sending requires an explicit request identifying the channel, recipient, approved template, and any parameters. Listing or drafting does not authorize a send. A queued response does not confirm delivery.
 
 ## Data and support
 

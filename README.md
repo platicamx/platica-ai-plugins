@@ -2,9 +2,9 @@
 
 Official source for **platic**, the Platica plugin for ChatGPT, Codex, Cursor, Claude, and Grok Build.
 
-Connect your Platica account to work with conversations, clients, templates, campaigns, AI agents, social comments, webhooks and usage. Messages, changes and deletions happen only when you explicitly request them, using your existing workspace permissions. Each user signs in through OAuth.
+Connect your Platica account to work with conversations, clients, templates, campaigns, AI agents, public comments and usage. Messages, changes and deletions happen only when you explicitly request them, using your existing workspace permissions. Each user signs in through OAuth.
 
-Every package connects to `https://api.platica.mx/mcp/apps`, the endpoint for app directories. It leaves out the tools that ask for credentials or connect third-party services (custom HTTP API tools and external MCP servers); those are configured in the Platica dashboard. The full catalog at `https://api.platica.mx/mcp` stays available to anyone who adds it by hand as a custom connector.
+Every package connects to `https://api.platica.mx/mcp/apps`, the endpoint for app directories. For the initial directory review, it leaves out custom tool discovery/connections, generic service messages, agent execution/delegation, webhook administration, moderation, private replies, knowledge updates/reprocessing and search/export. Those operations remain available in the Platica dashboard. The full catalog at `https://api.platica.mx/mcp` stays available to anyone who adds it by hand as a custom connector.
 
 ## Cursor
 
@@ -27,7 +27,7 @@ The plugin package lives in `chatgpt/`. To build the upload ZIP, run:
 npm run zip:chatgpt
 ```
 
-The output is `dist/platic-chatgpt.zip`, containing the manifest, MCP configuration, `use-platica` skill, icon, and license.
+The output is `dist/platic-chatgpt.zip`, containing the manifest, MCP configuration, `use-platica` skill, icon, and license. The internal package name is `platic-apps`, matching the new OpenAI registration at `/mcp/apps`; the display name remains **platic**. Upload updates to that registration, not the older one bound to `/mcp`.
 
 ## Claude
 
@@ -40,6 +40,10 @@ The plugin lives in `grok/` (`.grok-plugin/plugin.json`, `.mcp.json`, skill, REA
 ## Muse
 
 Muse connects to the MCP server directly, with no package in this repository.
+
+## Release order
+
+Deploy the matching `platica-api` directory-profile filter before uploading version 1.1.1 or recording its walkthrough. Then reconnect the demo account if needed and run Rescan on `/mcp/apps`. The eight positive and three negative review cases are unchanged; the generic service-message tool is not required by them. Package validation and local API tests do not prove OpenAI approval.
 
 ## Development
 
