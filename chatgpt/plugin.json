@@ -1,7 +1,7 @@
 {
   "$schema": "https://agent-plugins.org/schemas/1.0.0/plugin.schema.json",
   "name": "platic-apps",
-  "version": "1.1.6",
+  "version": "1.1.7",
   "description": "Connect a Platica workspace so ChatGPT can work with conversations, clients, campaigns and AI agents, and send or change things only when asked.",
   "author": {
     "name": "Platica",
@@ -55,18 +55,6 @@
               "expected_behavior": "Identify the TestPlugins workspace first, then show its recent conversations. Do not fabricate messages or mix results from other workspaces."
             },
             {
-              "description": "Find a demo client by name",
-              "prompt": "Find a client named Ana in the TestPlugins workspace.",
-              "tools_triggered": "list_workspaces, list_clients",
-              "expected_behavior": "Return TestPlugins clients matching Ana, such as Ana Pérez. If there are no matches, state that clearly. Do not claim the search is complete while unexamined result pages remain."
-            },
-            {
-              "description": "List WhatsApp templates",
-              "prompt": "Which WhatsApp templates are approved in the TestPlugins workspace?",
-              "tools_triggered": "list_workspaces, list_templates",
-              "expected_behavior": "Show approved templates from the TestPlugins workspace, including their names and statuses."
-            },
-            {
               "description": "Send one explicitly requested test template",
               "prompt": "Send the approved test_welcome_message template to Ana Pérez using the TestPlugins WhatsApp channel.",
               "tools_triggered": "list_workspaces, list_clients, list_channels, list_templates, get_template, send_template_message",
@@ -80,15 +68,9 @@
             },
             {
               "description": "Create a draft campaign without sending it",
-              "prompt": "Create a campaign named Review demo with the approved test_welcome_message template in the TestPlugins workspace, but do not send it.",
+              "prompt": "Create a campaign named Review demo with the approved test_welcome_message template in the TestPlugins workspace, but do not send it. Show its ID and status.",
               "tools_triggered": "list_workspaces, list_templates, create_campaign",
-              "expected_behavior": "Create the campaign with the test_welcome_message template and report its ID and status. Do not add an audience or call send_campaign."
-            },
-            {
-              "description": "Close one demo conversation",
-              "prompt": "Close the most recent Platica conversation in the TestPlugins workspace.",
-              "tools_triggered": "list_workspaces, list_conversations, update_conversation",
-              "expected_behavior": "Identify the most recent TestPlugins conversation and close it with update_conversation and status expired; Platica keeps it as expired if it was still initiated and stores it as finished otherwise. Update only that conversation and report the resulting status. Do not send a message to the contact."
+              "expected_behavior": "Create the campaign with the test_welcome_message template, report the returned campaign ID and the result status (success), and confirm that it has not been sent. Do not add an audience or call send_campaign."
             }
           ],
           "negative": [
@@ -113,7 +95,7 @@
         "commerce_description": "This plugin does not sell products or process payments."
       },
       "publication": {
-        "release_notes": "The skill no longer treats a request to delete all clients as something a confirmation can unlock: deletions require records named individually, and the plugin asks which ones instead of offering a bulk deletion. Review case 6 now explains that Platica keeps one client record per phone number and restores a previously deleted record instead of creating a new one. Closing conversations with status expired and the explicit Platica wording in cases 2, 8 and 11 are unchanged. The tools and the MCP endpoint (https://api.platica.mx/mcp/apps) are unchanged."
+        "release_notes": "This release provides exactly five positive and three negative review cases, covering workspace access, conversations, an explicitly requested WhatsApp template send, client creation or reuse, and an unsent draft campaign. An active client with the requested data may be reported as already registered without modification; deleted or different records can be restored or updated without duplication. Client deletion requires individually identified records; ambiguous bulk deletion is refused. The assistant reports the ID and status of every record it creates, updates or sends. The tools and the MCP endpoint (https://api.platica.mx/mcp/apps) are unchanged."
       }
     }
   }
