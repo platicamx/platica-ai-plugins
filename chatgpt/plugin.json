@@ -75,8 +75,8 @@
             {
               "description": "Create one requested demo client",
               "prompt": "Add a client named Ana Demo with the phone number +52 33 4183 6678 to the TestPlugins workspace.",
-              "tools_triggered": "list_workspaces, create_client",
-              "expected_behavior": "Create a single client named Ana Demo with that phone number in the TestPlugins workspace and report the returned client. Platica keeps one client record per phone number: if a record with that number already exists, including one deleted in an earlier run, create_client restores and updates that same record and reports it as updated. In that case, say so instead of creating a duplicate. Do not send any message or change other clients."
+              "tools_triggered": "list_workspaces, list_clients (to check whether the client already exists), create_client (only when the client must be created, restored or updated)",
+              "expected_behavior": "If no client with that phone number exists, create a single client named Ana Demo with that phone number in the TestPlugins workspace and report the returned client. Platica keeps one client record per phone number: if a record with that number was deleted in an earlier run, or exists with different details, create_client restores or updates that same record and reports it as updated; say so instead of creating a duplicate. If the client already exists, is active, and already has the requested name and phone number, the assistant may report that it is already registered without calling create_client or modifying it, and must state clearly that it made no changes. Do not send any message or change other clients."
             },
             {
               "description": "Create a draft campaign without sending it",
