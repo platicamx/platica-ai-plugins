@@ -1,7 +1,7 @@
 {
   "$schema": "https://agent-plugins.org/schemas/1.0.0/plugin.schema.json",
   "name": "platic-apps",
-  "version": "1.1.2",
+  "version": "1.1.4",
   "description": "Connect a Platica workspace so ChatGPT can work with conversations, clients, campaigns and AI agents, and send or change things only when asked.",
   "author": {
     "name": "Platica",
@@ -68,15 +68,15 @@
             },
             {
               "description": "Send one explicitly requested test template",
-              "prompt": "Send the approved test_welcome_message template to the demo recipient using the TestPlugins WhatsApp channel.",
-              "tools_triggered": "list_workspaces, list_channels, list_templates, get_template, send_template_message",
-              "expected_behavior": "Resolve the TestPlugins workspace, its WhatsApp channel, the demo recipient from the review setup, and the approved test_welcome_message template. Inspect the template before sending. Send once and report the returned ID or status. Ask for missing or ambiguous details before sending; do not retry automatically if the delivery outcome is unknown."
+              "prompt": "Send the approved test_welcome_message template to Ana Pérez using the TestPlugins WhatsApp channel.",
+              "tools_triggered": "list_workspaces, list_clients, list_channels, list_templates, get_template, send_template_message",
+              "expected_behavior": "Resolve the TestPlugins workspace, the client Ana Pérez and her phone number, the workspace WhatsApp channel, and the approved test_welcome_message template. Inspect the template before sending. Send once to Ana Pérez and report the returned ID or status. Ask for missing or ambiguous details before sending; do not retry automatically if the delivery outcome is unknown."
             },
             {
               "description": "Create one requested demo client",
-              "prompt": "Add a client named Ana Demo, using the demo phone number from the review setup, to the TestPlugins workspace.",
+              "prompt": "Add a client named Ana Demo with the phone number +52 33 4183 6678 to the TestPlugins workspace.",
               "tools_triggered": "list_workspaces, create_client",
-              "expected_behavior": "Create a single client in the TestPlugins workspace with the given name and phone number, and report the returned client. Do not send any message or change other clients."
+              "expected_behavior": "Create a single client named Ana Demo with that phone number in the TestPlugins workspace and report the returned client. If a client with that number already exists from an earlier run, say so instead of creating a duplicate. Do not send any message or change other clients."
             },
             {
               "description": "Create a draft campaign without sending it",
@@ -113,7 +113,7 @@
         "commerce_description": "This plugin does not sell products or process payments."
       },
       "publication": {
-        "release_notes": "Review cases now name the demo values reviewers will see: the TestPlugins workspace, the approved test_welcome_message template and the Ana Pérez client. The tools, the MCP endpoint (https://api.platica.mx/mcp/apps) and the reduced directory catalog are unchanged from 1.1.1. The internal package name platic-apps matches the OpenAI registration; the display name remains platic."
+        "release_notes": "An ambiguous bulk-deletion request, such as deleting all clients, now gets a clarifying question about the workspace and individual records before any tool call; the plugin no longer lists records to prepare such a deletion. Review cases name every demo value directly: the TestPlugins workspace, the approved test_welcome_message template, the recipient Ana Pérez and the phone number for the new client Ana Demo. The tools and the MCP endpoint (https://api.platica.mx/mcp/apps) are unchanged."
       }
     }
   }

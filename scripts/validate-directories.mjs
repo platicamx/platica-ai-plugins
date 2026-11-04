@@ -19,6 +19,7 @@ const packages = [
 export function validateDirectories(repositoryRoot = root) {
   const sharedSkill = text(join(repositoryRoot, "chatgpt/skills/use-platica/SKILL.md"));
   const cursorVersion = json(join(repositoryRoot, "cursor/.cursor-plugin/plugin.json")).version;
+  assert.equal(json(join(repositoryRoot, "chatgpt/plugin.json")).version, cursorVersion, "chatgpt: release every package with the same version");
 
   for (const { dir, manifest: manifestPath } of packages) {
     const base = join(repositoryRoot, dir);
