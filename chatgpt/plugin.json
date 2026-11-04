@@ -1,7 +1,7 @@
 {
   "$schema": "https://agent-plugins.org/schemas/1.0.0/plugin.schema.json",
   "name": "platic-apps",
-  "version": "1.1.3",
+  "version": "1.1.4",
   "description": "Connect a Platica workspace so ChatGPT can work with conversations, clients, campaigns and AI agents, and send or change things only when asked.",
   "author": {
     "name": "Platica",
@@ -113,7 +113,7 @@
         "commerce_description": "This plugin does not sell products or process payments."
       },
       "publication": {
-        "release_notes": "Review cases now name every demo value directly: the TestPlugins workspace, the approved test_welcome_message template, the recipient Ana Pérez (resolved from the workspace) and the phone number for the new client Ana Demo. The tools, the MCP endpoint (https://api.platica.mx/mcp/apps) and the reduced directory catalog are unchanged from 1.1.1. The internal package name platic-apps matches the OpenAI registration; the display name remains platic."
+        "release_notes": "An ambiguous bulk-deletion request, such as deleting all clients, now gets a clarifying question about the workspace and individual records before any tool call; the plugin no longer lists records to prepare such a deletion. Review cases name every demo value directly: the TestPlugins workspace, the approved test_welcome_message template, the recipient Ana Pérez and the phone number for the new client Ana Demo. The tools and the MCP endpoint (https://api.platica.mx/mcp/apps) are unchanged."
       }
     }
   }

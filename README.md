@@ -43,7 +43,7 @@ Muse connects to the MCP server directly, with no package in this repository.
 
 ## Release order
 
-Deploy the matching `platica-api` directory-profile filter before uploading version 1.1.1 or recording its walkthrough. Then reconnect the demo account if needed and run Rescan on `/mcp/apps`. The eight positive and three negative review cases are unchanged; the generic service-message tool is not required by them. Package validation and local API tests do not prove OpenAI approval.
+Deploy the matching `platica-api` directory-profile filter before uploading a new version or recording its walkthrough. Then reconnect the demo account if needed and run Rescan on `/mcp/apps`. The ChatGPT review cases (eight positive, three negative) use the TestPlugins demo workspace; the generic service-message tool is not required by them. Package validation and local API tests do not prove OpenAI approval.
 
 ## Development
 
