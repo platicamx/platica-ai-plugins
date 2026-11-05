@@ -33,8 +33,12 @@ Anything that sends a message, publishes, changes data or deletes records happen
 Tools exchange the data needed for each request with `api.platica.mx`, which may include workspace IDs, names, phone numbers and message content. The plugin adds no separate data store; Platica handles account data under its privacy policy.
 
 - [Setup and MCP documentation](https://docs.platica.mx/mcp/bienvenida)
-- [Privacy policy](https://platica.mx/privacidad)
-- [Terms of service](https://platica.mx/terminos-y-condiciones)
 - [Package issues](https://github.com/platicamx/platica-ai-plugins/issues)
+
+| Language | Privacy | Terms | Support |
+| --- | --- | --- | --- |
+| English | [Privacy notice](https://platica.mx/en/privacy) | [Terms and conditions](https://platica.mx/en/terms-and-conditions) | [Support](https://platica.mx/en/support) |
+| Português | [Aviso de privacidade](https://platica.mx/pt/privacidade) | [Termos e condições](https://platica.mx/pt/termos-e-condicoes) | [Suporte](https://platica.mx/pt/suporte) |
+| Español | [Aviso de privacidad](https://platica.mx/privacidad) | [Términos y condiciones](https://platica.mx/terminos-y-condiciones) | [Soporte](https://platica.mx/soporte) |
 
 Source is licensed under [MIT](LICENSE). Platica retains rights to its name and brand assets.

@@ -62,8 +62,12 @@ These checks validate the package structure. To check account access and tools, 
 ## Support and license
 
 - [MCP documentation](https://docs.platica.mx/mcp/bienvenida)
-- [Privacy policy](https://platica.mx/privacidad)
-- [Terms](https://platica.mx/terminos-y-condiciones)
 - [Issues](https://github.com/platicamx/platica-ai-plugins/issues)
+
+| Language | Privacy | Terms | Support |
+| --- | --- | --- | --- |
+| English | [Privacy notice](https://platica.mx/en/privacy) | [Terms and conditions](https://platica.mx/en/terms-and-conditions) | [Support](https://platica.mx/en/support) |
+| Português | [Aviso de privacidade](https://platica.mx/pt/privacidade) | [Termos e condições](https://platica.mx/pt/termos-e-condicoes) | [Suporte](https://platica.mx/pt/suporte) |
+| Español | [Aviso de privacidad](https://platica.mx/privacidad) | [Términos y condiciones](https://platica.mx/terminos-y-condiciones) | [Soporte](https://platica.mx/soporte) |
 
 The source is licensed under [MIT](LICENSE). Platica retains rights to its name and brand assets.
