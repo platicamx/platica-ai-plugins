@@ -1,7 +1,7 @@
 {
   "$schema": "https://agent-plugins.org/schemas/1.0.0/plugin.schema.json",
   "name": "platic-apps",
-  "version": "1.1.8",
+  "version": "1.1.9",
   "description": "Connect a Platica workspace so ChatGPT can work with conversations, clients, campaigns and AI agents, and send or change things only when asked.",
   "author": {
     "name": "Platica",
@@ -15,9 +15,9 @@
       "interface": {
         "displayName": "platic",
         "shortDescription": "WhatsApp, CRM and AI agents",
-        "longDescription": "Connect your Platica account to work in your authorized workspaces: read WhatsApp, Messenger, Instagram and comment conversations; manage clients, tags and custom fields; review WhatsApp templates and scheduled messages; send requested approved WhatsApp templates; prepare and send campaigns; configure AI agents, their prompts, schedules and guardrails; add, list and delete agent knowledge; publish and reply to social comments; and check usage. Anything that sends a message, publishes, changes data or deletes records happens only when you explicitly ask for it. Access follows your current workspace role and the permissions you authorize.",
+        "longDescription": "platic connects your Platica account to manage customer conversations, clients, campaigns and AI agents. Use it in your authorized workspaces to read WhatsApp, Messenger, Instagram and comment conversations; manage clients, tags and custom fields; review WhatsApp templates and scheduled messages; send requested approved WhatsApp templates; prepare and send campaigns; configure AI agents, their prompts, schedules and guardrails; add, list and delete agent knowledge; publish and reply to social comments; and check usage. Anything that sends a message, publishes, changes data or deletes records happens only when you explicitly ask for it. Access follows your current workspace role and the permissions you authorize.",
         "developerName": "Platica",
-        "category": "Productivity",
+        "category": "Business & Operations",
         "capabilities": [
           "Read conversations",
           "Manage clients and tags",
@@ -27,9 +27,9 @@
           "Publish and reply to social comments"
         ],
         "websiteURL": "https://platica.mx",
-        "supportURL": "https://docs.platica.mx/mcp/bienvenida",
-        "privacyPolicyURL": "https://platica.mx/privacidad",
-        "termsOfServiceURL": "https://platica.mx/terminos-y-condiciones",
+        "supportURL": "https://platica.mx/en/support",
+        "privacyPolicyURL": "https://platica.mx/en/privacy",
+        "termsOfServiceURL": "https://platica.mx/en/terms-and-conditions",
         "defaultPrompt": [
           "List the workspaces in my Platica account.",
           "Show recent conversations in my Platica workspace.",
@@ -95,7 +95,7 @@
         "commerce_description": "This plugin does not sell products or process payments."
       },
       "publication": {
-        "release_notes": "This release clarifies capability checks before announcing actions or calling tools. Unsupported financial requests must be declined without balance checks or referrals to the Platica dashboard. It provides exactly five positive and three negative review cases, covering workspace access, conversations, an explicitly requested WhatsApp template send, client creation or reuse, and an unsent draft campaign. An active client with the requested data may be reported as already registered without modification; deleted or different records can be restored or updated without duplication. Client deletion requires individually identified records; ambiguous bulk deletion is refused. The assistant reports the ID and status of every record it creates, updates or sends. The tools and the MCP endpoint (https://api.platica.mx/mcp/apps) are unchanged."
+        "release_notes": "Updates the listing links to the English privacy notice, terms and conditions, and support page. Sets the category to Business & Operations and clarifies that platic connects a Platica account to manage customer conversations, clients, campaigns and AI agents. Package documentation links to the English, Portuguese and Spanish pages. The skill, tools, MCP endpoint and five positive and three negative review cases are unchanged from 1.1.8; the same walkthrough applies."
       }
     }
   }
